@@ -120,3 +120,5 @@ function largest(arr){
 
   return count;
 
+// dom 
+// document object model
