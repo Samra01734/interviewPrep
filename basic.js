@@ -142,3 +142,74 @@ function done() {
 }
 
 greet("Samra", done);
+
+//
+let a = 5;
+let b = 10;
+
+let temp = a;
+a = b;
+b = temp;
+
+console.log(a, b);
+//find fectorial 
+let n = 5;
+let fact = 1;
+
+for(let i=1;i<=n;i++){
+    fact *= i;
+}
+
+console.log(fact);
+//palendrom
+let str = "madam";
+
+let rev = str.split("").reverse().join("");
+
+if(str === rev){
+    console.log("Palindrome");
+}else{
+    console.log("Not Palindrome");
+}
+// vol
+let str1 = "javascript";
+let count1 = 0;
+
+for(let i=0;i<str1.length;i++){
+    if("aeiou".includes(str1[i])){
+        count1++;
+    }
+}
+
+console.log(count1);
+//max num
+let arr = [10, 50, 30, 90, 20];
+
+let max = arr[0];
+
+for(let i=1;i<arr.length;i++){
+    if(arr[i] > max){
+        max = arr[i];
+    }
+}
+
+console.log(max);
+//random numb
+let randomNum = Math.floor(Math.random() * 100) + 1;
+
+console.log(randomNum);
+//fabbonacii series
+let n = 6;
+
+let a = 0, b = 1;
+
+console.log(a);
+console.log(b);
+
+for(let i=2;i<n;i++){
+    let c = a + b;
+    console.log(c);
+
+    a = b;
+    b = c;
+}
