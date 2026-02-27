@@ -199,17 +199,34 @@ let randomNum = Math.floor(Math.random() * 100) + 1;
 
 console.log(randomNum);
 //fabbonacii series
-let n = 6;
+let n1 = 6;
 
-let a = 0, b = 1;
+let a = 0, b1 = 1;
 
 console.log(a);
 console.log(b);
 
-for(let i=2;i<n;i++){
-    let c = a + b;
+for(let i=2;i<n1;i++){
+    let c = a + b1;
     console.log(c);
 
     a = b;
     b = c;
 }
+//
+Array.prototype.myMap = function(cb){
+  let result = [];
+
+  for(let i=0;i<this.length;i++){
+    result.push(cb(this[i], i, this));
+  }
+
+  return result;
+};
+
+let arr1 = [1,2,3];
+
+let doubled = arr1.myMap(num => num * 2);
+
+console.log(doubled);
+//
